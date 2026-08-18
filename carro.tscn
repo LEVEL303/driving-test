@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://bt7wrr7len1x0"]
+
+[ext_resource type="Script" uid="uid://d213awlh25tgb" path="res://carro.gd" id="1_dvi8e"]
+[ext_resource type="Texture2D" uid="uid://dqy8ibkclmp8f" path="res://imgs/seta.png" id="2_3mje1"]
+[ext_resource type="Texture2D" uid="uid://bt3baixro5oa1" path="res://imgs/carroSprite.svg" id="3_wjmyd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tneuq"]
+size = Vector2(60.5, 131)
+
+[node name="Node2D" type="CharacterBody2D" unique_id=1147379201]
+motion_mode = 1
+script = ExtResource("1_dvi8e")
+imagem_seta = ExtResource("2_3mje1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=6722075]
+position = Vector2(-0.25, 3.5)
+shape = SubResource("RectangleShape2D_tneuq")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=368273132]
+ignore_rotation = false
+zoom = Vector2(0.6, 0.6)
+position_smoothing_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1010094913]
+rotation = 4.712389
+texture = ExtResource("3_wjmyd")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=655963212]
+
+[node name="LabelVelocidade" type="Label" parent="CanvasLayer" unique_id=1543352497]
+offset_left = 637.0
+offset_top = 270.0
+offset_right = 677.0
+offset_bottom = 293.0
+
+[node name="TextureRectEsq" type="TextureRect" parent="CanvasLayer" unique_id=1397690902]
+offset_left = 35.000015
+offset_top = 504.0
+offset_right = 75.000015
+offset_bottom = 544.0
+scale = Vector2(0.1, 0.1)
+
+[node name="TextureRectDir" type="TextureRect" parent="CanvasLayer" unique_id=723435342]
+offset_left = 93.0
+offset_top = 504.0
+offset_right = 133.0
+offset_bottom = 544.0
+scale = Vector2(0.1, 0.1)

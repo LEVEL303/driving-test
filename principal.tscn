@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://43fvvlw7g6v2"]
+
+[ext_resource type="PackedScene" uid="uid://bt7wrr7len1x0" path="res://carro.tscn" id="1_tr6oq"]
+[ext_resource type="Texture2D" uid="uid://dewvqgjnospaj" path="res://icon.svg" id="2_m7tbw"]
+
+[node name="Node2D" type="Node2D" unique_id=521527966]
+
+[node name="Node2D" parent="." unique_id=1147379201 instance=ExtResource("1_tr6oq")]
+position = Vector2(323, 397)
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1402573587]
+position = Vector2(-279, 527)
+texture = ExtResource("2_m7tbw")
+
+[node name="Icon2" type="Sprite2D" parent="." unique_id=1774940012]
+position = Vector2(88, 158)
+texture = ExtResource("2_m7tbw")
+
+[node name="Icon3" type="Sprite2D" parent="." unique_id=49388479]
+position = Vector2(-824, 349)
+texture = ExtResource("2_m7tbw")
+
+[node name="Icon4" type="Sprite2D" parent="." unique_id=417250307]
+position = Vector2(-101, -375)
+texture = ExtResource("2_m7tbw")
+
+[node name="Icon5" type="Sprite2D" parent="." unique_id=1240156883]
+position = Vector2(-283, 152)
+texture = ExtResource("2_m7tbw")
+
+[node name="Icon6" type="Sprite2D" parent="." unique_id=555285806]
+position = Vector2(63, 528)
+texture = ExtResource("2_m7tbw")
