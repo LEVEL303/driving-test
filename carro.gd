@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var aceleracao: float = 120.0
 @export var forca_freio: float = 400.0
 @export var friccao: float = 80.0
-@export var velocidade_curva: float = 3.0
+@export var velocidade_curva: float = 1.5
 @export var suavidade_curva: float = 2.0
 @export var imagem_seta: Texture2D
 

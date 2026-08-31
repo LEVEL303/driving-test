@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bt3baixro5oa1"
-path="res://.godot/imported/carroSprite.svg-ac1cb2c8bde21efdcbef2fcac471eae9.ctex"
+uid="uid://dgujq36gy7u2u"
+path="res://.godot/imported/faixapedestres.png-13dded78e1ec9050938e34e44c4bfe49.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imgs/carroSprite.svg"
-dest_files=["res://.godot/imported/carroSprite.svg-ac1cb2c8bde21efdcbef2fcac471eae9.ctex"]
+source_file="res://imgs/faixapedestres.png"
+dest_files=["res://.godot/imported/faixapedestres.png-13dded78e1ec9050938e34e44c4bfe49.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

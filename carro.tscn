@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://d213awlh25tgb" path="res://carro.gd" id="1_dvi8e"]
 [ext_resource type="Texture2D" uid="uid://dqy8ibkclmp8f" path="res://imgs/seta.png" id="2_3mje1"]
-[ext_resource type="Texture2D" uid="uid://bt3baixro5oa1" path="res://imgs/carroSprite.svg" id="3_wjmyd"]
+[ext_resource type="Texture2D" uid="uid://bt3baixro5oa1" path="res://imgs/carro.svg" id="3_wjmyd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tneuq"]
 size = Vector2(60.5, 131)
 
-[node name="Node2D" type="CharacterBody2D" unique_id=1147379201]
+[node name="Carro" type="CharacterBody2D" unique_id=1147379201]
 motion_mode = 1
 script = ExtResource("1_dvi8e")
 imagem_seta = ExtResource("2_3mje1")

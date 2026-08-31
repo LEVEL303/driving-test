@@ -1,33 +1,1143 @@
 [gd_scene format=3 uid="uid://43fvvlw7g6v2"]
 
 [ext_resource type="PackedScene" uid="uid://bt7wrr7len1x0" path="res://carro.tscn" id="1_tr6oq"]
-[ext_resource type="Texture2D" uid="uid://dewvqgjnospaj" path="res://icon.svg" id="2_m7tbw"]
+[ext_resource type="Texture2D" uid="uid://bpeo848iu1brd" path="res://imgs/linhatracejada.png" id="2_m7tbw"]
+[ext_resource type="Texture2D" uid="uid://dgujq36gy7u2u" path="res://imgs/faixapedestres.png" id="2_rrtif"]
 
-[node name="Node2D" type="Node2D" unique_id=521527966]
+[node name="Principal" type="Node2D" unique_id=521527966]
 
-[node name="Node2D" parent="." unique_id=1147379201 instance=ExtResource("1_tr6oq")]
-position = Vector2(323, 397)
+[node name="Cenario" type="Polygon2D" parent="." unique_id=1639763089]
+position = Vector2(-1127.0001, 2627)
+scale = Vector2(2.076086, 2.7116556)
+color = Color(0, 0.5882353, 0, 1)
+polygon = PackedVector2Array(-3442.6067, -2285.252, 2790.202, -2285.252, 2799.8, 1177.8306, -3442.6067, 1177.8306)
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=1402573587]
-position = Vector2(-279, 527)
+[node name="Calcada" type="Line2D" parent="." unique_id=137576536]
+points = PackedVector2Array(-189, 1364, -193, -715, 2856, -725, 2862, 113, 2864, -725, 1647, -725, 1541, -922, 451, -922, 315, -721, -187, -722, -1060, -722, -1059, -2176, -2611, -2176, -2607, -717, -1060, -722, -1858, -721, -1858, 367, -4291, 367, -4291, 3026, -190, 3026, 2851, 3033, -190, 3026, -189, 1352, -1855, 1352, -1859, 3006, -4292, 3010, -4282, 367, -6753, 367, -6753, 3008, -4291, 3008, -4291, 4189, -3145, 4189, -1866, 3786, 630, 3786, 1989, 4104, 2858, 4098, 2862, 107, -187, 116, 2862, 107, 2857, 4096, 1983, 4103, 630, 4519, -1839, 4519, -3136, 4189, -4291, 4189, -6766, 4186, -6762, 394, -6762, -1925, -4273, -1925, -4273, -717, -2607, -717, -4273, -717, -4273, 367, -1858, 374, -1859, 1365)
+closed = true
+width = 450.0
+default_color = Color(0.5330367, 0.5330367, 0.5330367, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Pista" type="Line2D" parent="." unique_id=840747038]
+points = PackedVector2Array(-189, 1364, -193, -715, 2856, -725, 2862, 113, 2864, -725, 1647, -725, 1541, -922, 451, -922, 315, -721, -187, -722, -1060, -722, -1059, -2176, -2611, -2176, -2607, -717, -1060, -722, -1858, -721, -1858, 367, -4291, 367, -4291, 3026, -190, 3026, 2851, 3033, -190, 3026, -189, 1352, -1855, 1352, -1859, 3006, -4292, 3010, -4282, 367, -6753, 367, -6753, 3008, -4291, 3008, -4291, 4189, -3145, 4189, -1866, 3786, 630, 3786, 1989, 4104, 2858, 4098, 2862, 107, -187, 116, 2862, 107, 2857, 4096, 1983, 4103, 630, 4519, -1839, 4519, -3136, 4189, -4291, 4189, -6766, 4186, -6762, 394, -6762, -1925, -4273, -1925, -4273, -717, -2607, -717, -4273, -717, -4273, 367, -1858, 374, -1859, 1365)
+closed = true
+width = 300.0
+default_color = Color(0.23529412, 0.23529412, 0.23529412, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="LinhaEstacionamento" type="Line2D" parent="." unique_id=411834711]
+points = PackedVector2Array(1732, -879, 1589, -879, 1473, -1070, 1589, -879, 1424, -879, 1315, -1069, 1424, -879, 1260, -879, 1166, -1069, 1261, -879, 1097, -879, 1009, -1070, 1096, -879, 942, -879, 846, -1070, 942, -879, 784, -879, 686, -1070, 784, -879, 614, -879, 528, -1070, 614, -879, 454, -879, 380, -1048, 454, -879, 245, -879)
+
+[node name="LinhaTracejada" type="Line2D" parent="." unique_id=2001064133]
+texture_repeat = 2
+points = PackedVector2Array(42, -718, 2630, -718)
+width = 40.0
 texture = ExtResource("2_m7tbw")
+texture_mode = 1
 
-[node name="Icon2" type="Sprite2D" parent="." unique_id=1774940012]
-position = Vector2(88, 158)
+[node name="LinhaTracejada1" type="Line2D" parent="LinhaTracejada" unique_id=37608519]
+texture_repeat = 2
+position = Vector2(2146, 214)
+rotation = 1.570865
+points = PackedVector2Array(143.95068, -718.00977, 2573.9507, -718.17676)
+width = 40.0
 texture = ExtResource("2_m7tbw")
+texture_mode = 1
 
-[node name="Icon3" type="Sprite2D" parent="." unique_id=49388479]
-position = Vector2(-824, 349)
+[node name="LinhaTracejada2" type="Line2D" parent="LinhaTracejada" unique_id=1454544539]
+texture_repeat = 2
+position = Vector2(-906, 234)
+rotation = 1.570865
+points = PackedVector2Array(126.95067, -718.0087, 885.9507, -717.06085)
+width = 40.0
 texture = ExtResource("2_m7tbw")
+texture_mode = 1
 
-[node name="Icon4" type="Sprite2D" parent="." unique_id=417250307]
-position = Vector2(-101, -375)
+[node name="LinhaTracejada3" type="Line2D" parent="LinhaTracejada" unique_id=950976979]
+texture_repeat = 2
+position = Vector2(-5008, 281)
+rotation = 1.570865
+points = PackedVector2Array(334.95065, -718.02295, 2474.9507, -718.1699)
+width = 40.0
 texture = ExtResource("2_m7tbw")
+texture_mode = 1
 
-[node name="Icon5" type="Sprite2D" parent="." unique_id=1240156883]
-position = Vector2(-283, 152)
+[node name="LinhaTracejada4" type="Line2D" parent="LinhaTracejada" unique_id=1912712111]
+texture_repeat = 2
+position = Vector2(-7481, 280)
+rotation = 1.570865
+points = PackedVector2Array(334.95065, -718.02295, 2474.9507, -718.1699)
+width = 40.0
 texture = ExtResource("2_m7tbw")
+texture_mode = 1
 
-[node name="Icon6" type="Sprite2D" parent="." unique_id=555285806]
-position = Vector2(63, 528)
+[node name="LinhaTracejada5" type="Line2D" parent="LinhaTracejada" unique_id=1526153358]
+texture_repeat = 2
+position = Vector2(-7480, -2348)
+rotation = 1.570865
+points = PackedVector2Array(676.9508, -716.0469, 2462.9507, -718.16943)
+width = 40.0
 texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada6" type="Line2D" parent="LinhaTracejada" unique_id=131742355]
+texture_repeat = 2
+position = Vector2(-2580, 324)
+rotation = 1.570865
+points = PackedVector2Array(1290.9507, -717.08875, 2436.9507, -718.1675)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada7" type="Line2D" parent="LinhaTracejada" unique_id=49550938]
+texture_repeat = 2
+position = Vector2(-2573, -1387)
+rotation = 1.570865
+points = PackedVector2Array(1999.9507, -718.1373, 2496.9507, -718.1715)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada8" type="Line2D" parent="LinhaTracejada" unique_id=1608838241]
+texture_repeat = 2
+position = Vector2(-2573, -2467)
+rotation = 1.570865
+points = PackedVector2Array(1999.9507, -718.1373, 2583.9507, -718.1775)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada9" type="Line2D" parent="LinhaTracejada" unique_id=1053578277]
+texture_repeat = 2
+position = Vector2(-4997, -2466)
+rotation = 1.570865
+points = PackedVector2Array(1999.9507, -718.1373, 2599.9507, -718.1787)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada10" type="Line2D" parent="LinhaTracejada" unique_id=757170267]
+texture_repeat = 2
+position = Vector2(-911, -2473)
+rotation = 1.570865
+points = PackedVector2Array(1999.9507, -718.1373, 2346.9507, -718.16125)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada11" type="Line2D" parent="LinhaTracejada" unique_id=127193135]
+texture_repeat = 2
+position = Vector2(2144, -2455)
+rotation = 1.570865
+points = PackedVector2Array(1975.9506, -718.13574, 2322.9507, -718.1594)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada12" type="Line2D" parent="LinhaTracejada" unique_id=86109010]
+texture_repeat = 2
+position = Vector2(-4994.0005, -3690)
+rotation = 1.570865
+points = PackedVector2Array(1999.9507, -718.1373, 2741.9507, -718.1885)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada13" type="Line2D" parent="LinhaTracejada" unique_id=240857395]
+texture_repeat = 2
+position = Vector2(-3325, -3715)
+rotation = 1.570865
+points = PackedVector2Array(1779.9508, -718.1223, 2766.951, -718.1902)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada14" type="Line2D" parent="LinhaTracejada" unique_id=774200787]
+texture_repeat = 2
+position = Vector2(-1782, -3718)
+rotation = 1.570865
+points = PackedVector2Array(1779.9508, -718.1223, 2766.951, -718.1902)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada15" type="Line2D" parent="LinhaTracejada" unique_id=563955087]
+texture_repeat = 2
+position = Vector2(-910, 311)
+rotation = 1.570865
+points = PackedVector2Array(1290.9507, -717.08875, 2474.9507, -717.17004)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada16" type="Line2D" parent="LinhaTracejada" unique_id=1276003663]
+texture_repeat = 2
+position = Vector2(-7486, 1956.0001)
+rotation = 1.570865
+points = PackedVector2Array(1290.9507, -717.08875, 1990.9506, -718.1367)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada17" type="Line2D" parent="LinhaTracejada" unique_id=1916619229]
+texture_repeat = 2
+position = Vector2(-5014, 1967)
+rotation = 1.570865
+points = PackedVector2Array(1290.9507, -717.08875, 1990.9506, -718.1367)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada18" type="Line2D" parent="LinhaTracejada" unique_id=789246368]
+texture_repeat = 2
+position = Vector2(2139, 1874)
+rotation = 1.570865
+points = PackedVector2Array(1398.9507, -717.0962, 1990.9506, -718.1367)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada19" type="Line2D" parent="LinhaTracejada" unique_id=1413439972]
+texture_repeat = 2
+position = Vector2(2771, -609.99994)
+rotation = 3.1407595
+points = PackedVector2Array(150.5979, -717.87463, 2726.5994, -718.7284)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada20" type="Line2D" parent="LinhaTracejada" unique_id=964584159]
+texture_repeat = 2
+position = Vector2(2756.9998, 2299.0002)
+rotation = 3.1407595
+points = PackedVector2Array(150.5979, -717.87463, 2708.5999, -718.7434)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada21" type="Line2D" parent="LinhaTracejada" unique_id=23856381]
+texture_repeat = 2
+position = Vector2(-3979.9998, 2295)
+rotation = 3.1407595
+points = PackedVector2Array(547.5874, -704.5442, 2539.5898, -706.8843)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada22" type="Line2D" parent="LinhaTracejada" unique_id=2031143668]
+texture_repeat = 2
+position = Vector2(-3988.9998, 3472)
+rotation = 3.1407595
+points = PackedVector2Array(547.5874, -704.5442, 2539.5898, -706.8843)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada23" type="Line2D" parent="LinhaTracejada" unique_id=1248240299]
+texture_repeat = 2
+position = Vector2(-1540.0001, 2299.0002)
+rotation = 3.1407595
+points = PackedVector2Array(571.58704, -704.5237, 2526.5889, -705.895)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada24" type="Line2D" parent="LinhaTracejada" unique_id=1350356376]
+texture_repeat = 2
+position = Vector2(-1521.0001, -345)
+rotation = 3.1407595
+points = PackedVector2Array(598.5879, -705.50146, 2515.5889, -705.9043)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada25" type="Line2D" parent="LinhaTracejada" unique_id=278047261]
+texture_repeat = 2
+position = Vector2(-4017, -347.00003)
+rotation = 3.1407595
+points = PackedVector2Array(547.5874, -704.5442, 2504.5898, -706.91345)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada26" type="Line2D" parent="LinhaTracejada" unique_id=856580704]
+texture_repeat = 2
+position = Vector2(-3978.9998, -2634.9998)
+rotation = 3.1407595
+points = PackedVector2Array(547.5874, -704.5442, 2530.5903, -706.89185)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada27" type="Line2D" parent="LinhaTracejada" unique_id=1375924305]
+texture_repeat = 2
+position = Vector2(-1494, -1428)
+rotation = 3.1407595
+points = PackedVector2Array(1382.5901, -707.8483, 2527.5889, -705.89435)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada28" type="Line2D" parent="LinhaTracejada" unique_id=1546294952]
+texture_repeat = 2
+position = Vector2(144.00002, -2885.0002)
+rotation = 3.1407595
+points = PackedVector2Array(1449.5869, -703.7927, 2527.5889, -705.89435)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada29" type="Line2D" parent="LinhaTracejada" unique_id=583708208]
+texture_repeat = 2
+position = Vector2(968.99994, 641)
+rotation = 3.1407595
+points = PackedVector2Array(1403.5885, -705.83075, 2597.5889, -705.83606)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada30" type="Line2D" parent="LinhaTracejada" unique_id=1377315092]
+texture_repeat = 2
+position = Vector2(965.99994, 2311)
+rotation = 3.1407595
+points = PackedVector2Array(1403.5885, -705.83075, 2597.5889, -705.83606)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada31" type="Line2D" parent="LinhaTracejada" unique_id=474450503]
+texture_repeat = 2
+position = Vector2(946.99994, -1433)
+rotation = 3.1407595
+points = PackedVector2Array(1403.5894, -706.8308, 1745.5891, -706.54584)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada32" type="Line2D" parent="LinhaTracejada" unique_id=1097965770]
+texture_repeat = 2
+position = Vector2(93, -1435)
+rotation = 3.1407595
+points = PackedVector2Array(1403.5894, -706.8308, 1709.5892, -706.5758)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada33" type="Line2D" parent="LinhaTracejada" unique_id=104506821]
+texture_repeat = 2
+position = Vector2(-719.00006, -1428)
+rotation = 3.1407595
+points = PackedVector2Array(1403.5894, -706.8308, 1624.5894, -706.6467)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada34" type="Line2D" parent="LinhaTracejada" unique_id=130381489]
+texture_repeat = 2
+position = Vector2(-2381, 3472.9998)
+rotation = 3.1407595
+points = PackedVector2Array(-4346.469, -638.6221, -3012.1309, -1044.5103, -550.12573, -1049.459, 738.5703, -709.32544, 1643.5903, -707.6311)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="LinhaTracejada35" type="Line2D" parent="LinhaTracejada" unique_id=1066222801]
+texture_repeat = 2
+position = Vector2(3523, 3391)
+rotation = 3.1407595
+points = PackedVector2Array(918.58716, -704.2351, 1550.945, -702.7306, 2912.3237, -387.5735, 5389.326, -389.50977, 6622.644, -770.4824)
+width = 40.0
+texture = ExtResource("2_m7tbw")
+texture_mode = 1
+
+[node name="FaixaPedestres" type="Line2D" parent="." unique_id=726497557]
+texture_repeat = 2
+position = Vector2(16, 14)
+points = PackedVector2Array(-26, -888, -26, -583)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres1" type="Line2D" parent="FaixaPedestres" unique_id=1030299238]
+texture_repeat = 2
+position = Vector2(-948, -520)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691162, -591.01404)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres2" type="Line2D" parent="FaixaPedestres" unique_id=613329652]
+texture_repeat = 2
+position = Vector2(-948, -54.999996)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691162, -591.01404)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres3" type="Line2D" parent="FaixaPedestres" unique_id=111640376]
+texture_repeat = 2
+position = Vector2(-947, 309)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691162, -591.01404)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres4" type="Line2D" parent="FaixaPedestres" unique_id=1058572289]
+texture_repeat = 2
+position = Vector2(-944.00006, 1184)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691162, -591.01404)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres5" type="Line2D" parent="FaixaPedestres" unique_id=1927511607]
+texture_repeat = 2
+position = Vector2(-944, 1559.0001)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691162, -591.01404)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres6" type="Line2D" parent="FaixaPedestres" unique_id=1386503493]
+texture_repeat = 2
+position = Vector2(-945, 2857.0002)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691162, -591.01404)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres7" type="Line2D" parent="FaixaPedestres" unique_id=985321514]
+texture_repeat = 2
+position = Vector2(2108, -531)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.694336, -585.01416)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres8" type="Line2D" parent="FaixaPedestres" unique_id=2114854768]
+texture_repeat = 2
+position = Vector2(2108.0002, -62)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.692791, -588.01416)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres9" type="Line2D" parent="FaixaPedestres" unique_id=824884817]
+texture_repeat = 2
+position = Vector2(2107.0002, 302)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691223, -591.0139)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres10" type="Line2D" parent="FaixaPedestres" unique_id=1908376642]
+texture_repeat = 2
+position = Vector2(2104.0002, 2863.0002)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691223, -591.0139)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres11" type="Line2D" parent="FaixaPedestres" unique_id=995244791]
+texture_repeat = 2
+position = Vector2(2104, 3227.0002)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691223, -591.0139)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres12" type="Line2D" parent="FaixaPedestres" unique_id=843833347]
+texture_repeat = 2
+position = Vector2(2102.0002, 3927)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691223, -591.0139)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres13" type="Line2D" parent="FaixaPedestres" unique_id=527461481]
+texture_repeat = 2
+position = Vector2(-1815, -890)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691223, -591.0139)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres14" type="Line2D" parent="FaixaPedestres" unique_id=1633392594]
+texture_repeat = 2
+position = Vector2(-1814, -1982)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691223, -591.0139)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres15" type="Line2D" parent="FaixaPedestres" unique_id=89118810]
+texture_repeat = 2
+position = Vector2(-3366, -1982.0001)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691223, -591.0139)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres16" type="Line2D" parent="FaixaPedestres" unique_id=978617510]
+texture_repeat = 2
+position = Vector2(-3363, -885)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691223, -591.0139)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres17" type="Line2D" parent="FaixaPedestres" unique_id=108966634]
+texture_repeat = 2
+position = Vector2(-2613.0002, -524)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691223, -591.0139)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres18" type="Line2D" parent="FaixaPedestres" unique_id=853132474]
+texture_repeat = 2
+position = Vector2(-2613.0002, 198.99998)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691223, -591.0139)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres19" type="Line2D" parent="FaixaPedestres" unique_id=1016036972]
+texture_repeat = 2
+position = Vector2(-2613.0002, 567)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691223, -591.0139)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres20" type="Line2D" parent="FaixaPedestres" unique_id=1383266747]
+texture_repeat = 2
+position = Vector2(-2614.0002, 1184.0001)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691223, -591.0139)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres21" type="Line2D" parent="FaixaPedestres" unique_id=460925402]
+texture_repeat = 2
+position = Vector2(-2611.0002, 1558.9999)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691223, -591.0139)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres22" type="Line2D" parent="FaixaPedestres" unique_id=88760649]
+texture_repeat = 2
+position = Vector2(-2613.0002, 2837.0002)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691223, -591.0139)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres23" type="Line2D" parent="FaixaPedestres" unique_id=335812273]
+texture_repeat = 2
+position = Vector2(-5046.0005, 4021.0002)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691223, -591.0139)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres24" type="Line2D" parent="FaixaPedestres" unique_id=1884217708]
+texture_repeat = 2
+position = Vector2(-5046.0005, 3220)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691223, -591.0139)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres25" type="Line2D" parent="FaixaPedestres" unique_id=350154641]
+texture_repeat = 2
+position = Vector2(-5046.0005, 2840.0002)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691223, -591.0139)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres26" type="Line2D" parent="FaixaPedestres" unique_id=947047591]
+texture_repeat = 2
+position = Vector2(-5038, 561.00006)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.695435, -583.01465)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres27" type="Line2D" parent="FaixaPedestres" unique_id=1819241340]
+texture_repeat = 2
+position = Vector2(-5029, 199)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691208, -591.01416)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres28" type="Line2D" parent="FaixaPedestres" unique_id=258491575]
+texture_repeat = 2
+position = Vector2(-5029, -524.00006)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691208, -591.01416)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres29" type="Line2D" parent="FaixaPedestres" unique_id=147189898]
+texture_repeat = 2
+position = Vector2(-5028.0005, -885)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691208, -591.01416)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres30" type="Line2D" parent="FaixaPedestres" unique_id=1708886224]
+texture_repeat = 2
+position = Vector2(-5028.0005, -1731)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691208, -591.01416)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres31" type="Line2D" parent="FaixaPedestres" unique_id=2114169387]
+texture_repeat = 2
+position = Vector2(-7517, -1731)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691208, -591.01416)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres32" type="Line2D" parent="FaixaPedestres" unique_id=1399899472]
+texture_repeat = 2
+position = Vector2(-7517, 199)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691208, -591.01416)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres33" type="Line2D" parent="FaixaPedestres" unique_id=592208481]
+texture_repeat = 2
+position = Vector2(-7508, 561)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.695923, -582.01416)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres34" type="Line2D" parent="FaixaPedestres" unique_id=615105084]
+texture_repeat = 2
+position = Vector2(-7509, 2840.0002)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.695923, -582.01416)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres35" type="Line2D" parent="FaixaPedestres" unique_id=735439710]
+texture_repeat = 2
+position = Vector2(-7520, 3202)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691895, -590.01416)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres36" type="Line2D" parent="FaixaPedestres" unique_id=944001105]
+texture_repeat = 2
+position = Vector2(-7520, 4019.0002)
+rotation = 1.5702739
+points = PackedVector2Array(-26.53601, -888.014, -26.691895, -590.01416)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres37" type="Line2D" parent="FaixaPedestres" unique_id=1370260172]
+texture_repeat = 2
+position = Vector2(-366.99997, 4)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.691162, -591.01404)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres38" type="Line2D" parent="FaixaPedestres" unique_id=1924804235]
+texture_repeat = 2
+position = Vector2(-867.99994, 4)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.691162, -591.01404)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres39" type="Line2D" parent="FaixaPedestres" unique_id=2121271215]
+texture_repeat = 2
+position = Vector2(-1230.9999, 3)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.691162, -591.01404)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres40" type="Line2D" parent="FaixaPedestres" unique_id=25102320]
+texture_repeat = 2
+position = Vector2(-1662.9999, 5)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.691162, -591.01404)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres41" type="Line2D" parent="FaixaPedestres" unique_id=835636966]
+texture_repeat = 2
+position = Vector2(-2030, 5)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.691162, -591.01404)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres42" type="Line2D" parent="FaixaPedestres" unique_id=791456974]
+texture_repeat = 2
+position = Vector2(-2413.9998, 8)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.691162, -591.01404)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres43" type="Line2D" parent="FaixaPedestres" unique_id=495682258]
+texture_repeat = 2
+position = Vector2(-2780.9998, 8)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.691162, -591.01404)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres44" type="Line2D" parent="FaixaPedestres" unique_id=379629006]
+texture_repeat = 2
+position = Vector2(-4080.9995, 7.999996)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.691162, -591.01404)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres45" type="Line2D" parent="FaixaPedestres" unique_id=74262212]
+texture_repeat = 2
+position = Vector2(-2417.9998, -1451)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.691162, -591.01404)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres46" type="Line2D" parent="FaixaPedestres" unique_id=196088092]
+texture_repeat = 2
+position = Vector2(-1229.9999, -1450.9999)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.691162, -591.01404)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres47" type="Line2D" parent="FaixaPedestres" unique_id=2137780877]
+texture_repeat = 2
+position = Vector2(-4444.9995, -1199.9999)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.691162, -591.01404)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres48" type="Line2D" parent="FaixaPedestres" unique_id=2034893913]
+texture_repeat = 2
+position = Vector2(-6568.9995, -1200.9999)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.691162, -591.01404)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres49" type="Line2D" parent="FaixaPedestres" unique_id=1701442510]
+texture_repeat = 2
+position = Vector2(-6561.9995, 1091.9999)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.691162, -591.01404)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres50" type="Line2D" parent="FaixaPedestres" unique_id=1426905492]
+texture_repeat = 2
+position = Vector2(-4461.9995, 1091.9999)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.691162, -591.01404)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres51" type="Line2D" parent="FaixaPedestres" unique_id=274913584]
+texture_repeat = 2
+position = Vector2(-4080, 1091.9999)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.691162, -591.01404)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres52" type="Line2D" parent="FaixaPedestres" unique_id=1276118815]
+texture_repeat = 2
+position = Vector2(-2029, 1092.9998)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.178223, -584.9917)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres53" type="Line2D" parent="FaixaPedestres" unique_id=1813000620]
+texture_repeat = 2
+position = Vector2(3, 841.99994)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.180302, -591.99194)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres54" type="Line2D" parent="FaixaPedestres" unique_id=1930070747]
+texture_repeat = 2
+position = Vector2(2688.9998, 832.99994)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.180302, -591.99194)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres55" type="Line2D" parent="FaixaPedestres" unique_id=821942115]
+texture_repeat = 2
+position = Vector2(-1663.9999, 2076.9995)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.175903, -576.9916)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres56" type="Line2D" parent="FaixaPedestres" unique_id=924459933]
+texture_repeat = 2
+position = Vector2(-359.99997, 2075.9998)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.175903, -576.9916)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres57" type="Line2D" parent="FaixaPedestres" unique_id=1269886636]
+texture_repeat = 2
+position = Vector2(2684.9998, 1)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.180302, -591.99194)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres58" type="Line2D" parent="FaixaPedestres" unique_id=1899962390]
+texture_repeat = 2
+position = Vector2(-6560, 3734)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.180302, -591.99194)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres59" type="Line2D" parent="FaixaPedestres" unique_id=322974945]
+texture_repeat = 2
+position = Vector2(-4461.9995, 3734)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.180302, -591.99194)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres60" type="Line2D" parent="FaixaPedestres" unique_id=1850400908]
+texture_repeat = 2
+position = Vector2(-4097.9995, 3734)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.175049, -572.99194)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres61" type="Line2D" parent="FaixaPedestres" unique_id=593886455]
+texture_repeat = 2
+position = Vector2(-2032, 3732.9998)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.175049, -572.99194)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres62" type="Line2D" parent="FaixaPedestres" unique_id=390999828]
+texture_repeat = 2
+position = Vector2(-1666.9999, 3751.9998)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.180664, -592.99194)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres63" type="Line2D" parent="FaixaPedestres" unique_id=293533127]
+texture_repeat = 2
+position = Vector2(-360.99997, 3752)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.180664, -592.99194)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres64" type="Line2D" parent="FaixaPedestres" unique_id=979713955]
+texture_repeat = 2
+position = Vector2(4, 3751.9998)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.180664, -592.99194)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres65" type="Line2D" parent="FaixaPedestres" unique_id=1938416102]
+texture_repeat = 2
+position = Vector2(2686.9998, 3759.9998)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.180664, -592.99194)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres66" type="Line2D" parent="FaixaPedestres" unique_id=1186401477]
+texture_repeat = 2
+position = Vector2(2686.9998, 4821.9995)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.1792, -588.9917)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres67" type="Line2D" parent="FaixaPedestres" unique_id=524103560]
+texture_repeat = 2
+position = Vector2(-6575, 4910.9995)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.180664, -592.99194)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres68" type="Line2D" parent="FaixaPedestres" unique_id=376914195]
+texture_repeat = 2
+position = Vector2(-4461.9995, 4913.999)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.180664, -592.99194)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="FaixaPedestres69" type="Line2D" parent="FaixaPedestres" unique_id=626068416]
+texture_repeat = 2
+position = Vector2(-4097.9995, 4914.9995)
+rotation = 0.00030456856
+points = PackedVector2Array(-26.53601, -888.014, -26.180664, -592.99194)
+width = 60.0
+texture = ExtResource("2_rrtif")
+texture_mode = 1
+
+[node name="Carro" parent="." unique_id=1147379201 instance=ExtResource("1_tr6oq")]
+position = Vector2(969, -979.99994)
+rotation = -0.5235988
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1375510544]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1598389013]
+polygon = PackedVector2Array(-37, -557, 2705, -570, 2707, -48, -36, -39)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D" unique_id=1420026328]
+polygon = PackedVector2Array(-1703, -564, -349, -564, -346, 1195, -1703, 1197)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Area2D" unique_id=1147189510]
+polygon = PackedVector2Array(-2454, -2021, -1215, -2021, -1215, -877, -2454, -873)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Area2D" unique_id=456129570]
+polygon = PackedVector2Array(-36, 270, -37, 2869, 2703, 2880, 2708, 261)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Area2D" unique_id=1203550242]
+polygon = PackedVector2Array(-1701, 1520, -345, 1518, -346, 2869, -1703, 2869)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Area2D" unique_id=1652178481]
+polygon = PackedVector2Array(-4119, -565, -2011, -566, -2013, 213, -4119, 211)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Area2D" unique_id=10784188]
+polygon = PackedVector2Array(-4128, 524, -2016, 529, -2015, 2852, -4132, 2852)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Area2D" unique_id=1087324944]
+polygon = PackedVector2Array(-6607, -1771, -4427, -1771, -4427, 212, -6606, 210)
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Area2D" unique_id=1206003797]
+polygon = PackedVector2Array(-6596, 523, -4445, 520, -4445, 2852, -6600, 2855)
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="Area2D" unique_id=1913070866]
+polygon = PackedVector2Array(-6610, 3165, -4444, 3162, -4445, 4035, -6613, 4031)
+
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="Area2D" unique_id=1882683613]
+polygon = PackedVector2Array(-2581, 4172, -1843, 3939, 615, 3940, 1395, 4122, 602, 4367, -1821, 4367)
+
+[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="Area2D" unique_id=1439379679]
+polygon = PackedVector2Array(-4138, 3181, -4136, 4033, -3172, 4033, -1897, 3636, -1895, 3177)
+
+[node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="Area2D" unique_id=955167145]
+polygon = PackedVector2Array(2703, 3185, 2704, 3943, 2003, 3948, 632, 3629, 631, 3179)
+
+[node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="Area2D" unique_id=1349574875]
+polygon = PackedVector2Array(-1893, 3178, -1894, 3633, 628, 3630, 628, 3179)
+
+[node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="Area2D" unique_id=560485469]
+polygon = PackedVector2Array(-906, -875, -908, -3569, 358, -3569, 350, -1041, 234, -874)
+
+[node name="CollisionPolygon2D16" type="CollisionPolygon2D" parent="Area2D" unique_id=2083141339]
+polygon = PackedVector2Array(340, -1075, 1642, -1074, 1645, -3567, 350, -3567)
+
+[node name="CollisionPolygon2D17" type="CollisionPolygon2D" parent="Area2D" unique_id=1381374899]
+polygon = PackedVector2Array(1737, -877, 1630, -1074, 1638, -3567, 4659, -3564, 4666, -881)
+
+[node name="CollisionPolygon2D18" type="CollisionPolygon2D" parent="Area2D" unique_id=96925002]
+polygon = PackedVector2Array(3015, -879, 4666, -882, 4672, 5812, 3013, 5810)
+
+[node name="CollisionPolygon2D19" type="CollisionPolygon2D" parent="Area2D" unique_id=26777095]
+polygon = PackedVector2Array(3013, 4247, 3004, 5809, 641, 5814, 638, 4676, 2002, 4256)
+
+[node name="CollisionPolygon2D20" type="CollisionPolygon2D" parent="Area2D" unique_id=1139706077]
+polygon = PackedVector2Array(636, 4672, 638, 5815, -1844, 5811, -1843, 4671)
+
+[node name="CollisionPolygon2D21" type="CollisionPolygon2D" parent="Area2D" unique_id=1284920881]
+polygon = PackedVector2Array(-911, -3568, -910, -2329, -2770, -2330, -2777, -3567)
+
+[node name="CollisionPolygon2D22" type="CollisionPolygon2D" parent="Area2D" unique_id=493930028]
+polygon = PackedVector2Array(-2763, -871, -4119, -871, -4123, -3567, -2764, -3568)
+
+[node name="CollisionPolygon2D23" type="CollisionPolygon2D" parent="Area2D" unique_id=556395683]
+polygon = PackedVector2Array(-1845, 4673, -1847, 5813, -8267, 5812, -8268, 4345, -3156, 4342)
+
+[node name="CollisionPolygon2D24" type="CollisionPolygon2D" parent="Area2D" unique_id=1231171009]
+polygon = PackedVector2Array(-4122, -2076, -4125, -3569, -8273, -3568, -8269, -2080)
+
+[node name="CollisionPolygon2D25" type="CollisionPolygon2D" parent="Area2D" unique_id=893026234]
+polygon = PackedVector2Array(-6914, -2082, -8270, -2078, -8266, 4337, -6920, 4342)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=287224595]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1502891816]
+polygon = PackedVector2Array(33, -490, 2630, -497, 2633, -119, 36, -112)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1482103839]
+polygon = PackedVector2Array(-1631, -493, -420, -495, -418, 1122, -1631, 1123)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=385445590]
+polygon = PackedVector2Array(-2383, -1949, -1286, -1949, -1286, -948, -2380, -946)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1917190521]
+polygon = PackedVector2Array(35, 341, 38, 2798, 2630, 2804, 2635, 334)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1220962438]
+polygon = PackedVector2Array(-1629, 1591, -415, 1590, -416, 2799, -1631, 2798)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=804125242]
+polygon = PackedVector2Array(-4047, -491, -2084, -493, -2084, 141, -4046, 140)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=875630366]
+polygon = PackedVector2Array(-4056, 595, -2086, 601, -2087, 2779, -4062, 2781)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1147663769]
+polygon = PackedVector2Array(-6536, -1699, -4501, -1697, -4503, 137, -6534, 138)
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=129632845]
+polygon = PackedVector2Array(-6527, 593, -4518, 594, -4520, 2780, -6527, 2782)
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1217302872]
+polygon = PackedVector2Array(-6539, 3234, -4517, 3234, -4519, 3961, -6539, 3959)
+
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=2142132541]
+polygon = PackedVector2Array(-2316, 4165, -1832, 4012, 602, 4012, 1121, 4132, 596, 4293, -1812, 4293)
+
+[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1702216169]
+polygon = PackedVector2Array(-4065, 3252, -4064, 3962, -3181, 3962, -1897, 3556, -1895, 3252)
+
+[node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1261945992]
+polygon = PackedVector2Array(2631, 3259, 2631, 3871, 2011, 3876, 632, 3554, 632, 3254)
+
+[node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=601691113]
+polygon = PackedVector2Array(-1892, 3252, -1896, 3560, 631, 3559, 630, 3253)
+
+[node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1269778057]
+polygon = PackedVector2Array(-831, -951, -837, -3569, 353, -3569, 339, -1148, 189, -950)
+
+[node name="CollisionPolygon2D16" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1807819722]
+polygon = PackedVector2Array(343, -1150, 1659, -1150, 1645, -3567, 350, -3567)
+
+[node name="CollisionPolygon2D17" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=928030121]
+polygon = PackedVector2Array(1786, -954, 1661, -1146, 1638, -3567, 4659, -3564, 4667, -955)
+
+[node name="CollisionPolygon2D18" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=113429625]
+polygon = PackedVector2Array(3095, -965, 4673, -956, 4672, 5812, 3083, 5808)
+
+[node name="CollisionPolygon2D19" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1533255152]
+polygon = PackedVector2Array(3088, 4324, 3080, 5805, 641, 5814, 643, 4755, 2016, 4330)
+
+[node name="CollisionPolygon2D20" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1164484311]
+polygon = PackedVector2Array(643, 4744, 638, 5815, -1844, 5811, -1843, 4746)
+
+[node name="CollisionPolygon2D21" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=126798195]
+polygon = PackedVector2Array(-834, -3569, -834, -2401, -2838, -2402, -2839, -3569)
+
+[node name="CollisionPolygon2D22" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=894532880]
+polygon = PackedVector2Array(-2836, -944, -4046, -944, -4047, -3570, -2841, -3565)
+
+[node name="CollisionPolygon2D23" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=848179625]
+polygon = PackedVector2Array(-1843, 4750, -1847, 5813, -8267, 5812, -8257, 4410, -3166, 4417)
+
+[node name="CollisionPolygon2D24" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=142032688]
+polygon = PackedVector2Array(-4052, -2155, -4047, -3560, -8273, -3568, -8269, -2153)
+
+[node name="CollisionPolygon2D25" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1929235475]
+polygon = PackedVector2Array(-6988, -2152, -8270, -2151, -8266, 4407, -6985, 4403)
