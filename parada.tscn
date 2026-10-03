@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bdgqh5y725n0e"]
+
+[ext_resource type="Script" uid="uid://co0ugwxmj6lfx" path="res://parada.gd" id="1_4h8s1"]
+[ext_resource type="Texture2D" uid="uid://nk5nj8klphpt" path="res://imgs/sinalização/Pare.png" id="1_yxjqs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_05b0h"]
+size = Vector2(149, 133.9375)
+
+[node name="Parada" type="Area2D" unique_id=1303397910]
+script = ExtResource("1_4h8s1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1977380568]
+position = Vector2(341, 37)
+texture = ExtResource("1_yxjqs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=675164684]
+position = Vector2(234.5, 68.03125)
+shape = SubResource("RectangleShape2D_05b0h")

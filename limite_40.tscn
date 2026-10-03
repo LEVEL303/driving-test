@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cvaqylgkrm216"]
+
+[ext_resource type="Script" uid="uid://btfu3xx0tffrk" path="res://limite_40.gd" id="1_ai0qs"]
+[ext_resource type="Texture2D" uid="uid://btq0ii85cettp" path="res://imgs/sinalização/Velociade-maxima-40.png" id="2_76ru4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cykfd"]
+size = Vector2(149, 65.9375)
+
+[node name="limite40" type="Area2D" unique_id=1665332211]
+script = ExtResource("1_ai0qs")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1984913909]
+position = Vector2(345, 34)
+scale = Vector2(0.049804658, 0.050292965)
+texture = ExtResource("2_76ru4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1005618665]
+position = Vector2(234.5, 34.03125)
+shape = SubResource("RectangleShape2D_cykfd")

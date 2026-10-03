@@ -12,6 +12,8 @@ var velocidade_maxima: float = 500.0
 var velocidade_atual: float = 0.0
 var direcao_atual: float = 0.0
 var estado_seta: String = "desligada"
+var limite_via_kmh: int = 100
+var falta_velocidade_registrada: bool = false
 
 @onready var label_velocidade = $CanvasLayer/LabelVelocidade
 @onready var icone_seta_esq = $CanvasLayer/TextureRectEsq
@@ -67,6 +69,11 @@ func _physics_process(delta: float) -> void:
 	
 	var velocidade_kmh = abs(velocidade_atual) * 0.2
 	label_velocidade.text = str(int(velocidade_kmh)) + " km/h (Max: " + str(limite_kmh) + ")"
+	
+	if int(velocidade_kmh) > limite_via_kmh:
+		if not falta_velocidade_registrada:
+			print("Falta registrada: Excedeu o limite de ", limite_via_kmh, " km/h neste trecho.")
+			falta_velocidade_registrada = true
 	
 	icone_seta_esq.modulate = Color(1, 1, 1, 1) if estado_seta == "esquerda" else Color(0.2, 0.2, 0.2, 1)
 	icone_seta_dir.modulate = Color(1, 1, 1, 1) if estado_seta == "direita" else Color(0.2, 0.2, 0.2, 1)

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dxg4nvaqv1uh5"]
+
+[ext_resource type="Script" uid="uid://dt5idedtheehi" path="res://limite_60.gd" id="1_byj3c"]
+[ext_resource type="Texture2D" uid="uid://co7arujg7t2uq" path="res://imgs/sinalização/Velociade-maxima-60.png" id="2_861no"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_533hl"]
+size = Vector2(149, 65.9375)
+
+[node name="limite60" type="Area2D" unique_id=344510100]
+script = ExtResource("1_byj3c")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1786512446]
+position = Vector2(345, 34)
+scale = Vector2(0.049804658, 0.050292965)
+texture = ExtResource("2_861no")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=995946927]
+position = Vector2(226, 95)
+shape = SubResource("RectangleShape2D_533hl")

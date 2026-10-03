@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dsu47ntjh6viw"]
+
+[ext_resource type="Script" uid="uid://bo0a3qjviox3r" path="res://semaforo.gd" id="1_4uaed"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tneuq"]
+size = Vector2(307, 62)
+
+[node name="Semaforo" type="Area2D" unique_id=363667696]
+script = ExtResource("1_4uaed")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1664111468]
+offset_left = 380.0
+offset_top = 13.0
+offset_right = 427.0
+offset_bottom = 114.0
+color = Color(0.11858135, 0.11858139, 0.11858138, 1)
+
+[node name="Vermelho" type="ColorRect" parent="ColorRect" unique_id=1637114530]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 36.0
+offset_bottom = 34.0
+color = Color(0.39215687, 0, 0, 1)
+
+[node name="Amarelo" type="ColorRect" parent="ColorRect" unique_id=1185517666]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 38.0
+offset_right = 36.0
+offset_bottom = 64.0
+color = Color(0.30686554, 0.5046375, 3.85046e-07, 1)
+
+[node name="Verde" type="ColorRect" parent="ColorRect" unique_id=1658583436]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 68.0
+offset_right = 36.0
+offset_bottom = 94.0
+color = Color(0, 0.39215687, 0, 1)
+
+[node name="Timer" type="Timer" parent="." unique_id=19454184]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2038521175]
+position = Vector2(217.5, 33)
+shape = SubResource("RectangleShape2D_tneuq")
