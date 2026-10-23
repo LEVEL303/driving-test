@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cykfd"]
 size = Vector2(149, 65.9375)
 
-[node name="limite40" type="Area2D" unique_id=1665332211]
+[node name="Limite40" type="Area2D" unique_id=1665332211]
 script = ExtResource("1_ai0qs")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1984913909]

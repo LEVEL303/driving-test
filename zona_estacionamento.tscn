@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://df6hwtpkr8mci"]
+
+[ext_resource type="Script" uid="uid://cw78a5ricu10t" path="res://zona_estacionamento.gd" id="1_xbheg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tneuq"]
+size = Vector2(887, 186)
+
+[node name="ZonaEstacionamento" type="Area2D" unique_id=178074888]
+script = ExtResource("1_xbheg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=932736485]
+position = Vector2(447.5, 94)
+shape = SubResource("RectangleShape2D_tneuq")

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://furtpkx5qc2e"]
+
+[ext_resource type="Script" uid="uid://coqjcvnq3ff34" path="res://contramao.gd" id="1_llgri"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tneuq"]
+size = Vector2(324.5, 136.5)
+
+[node name="Contramao" type="Area2D" unique_id=1785982140]
+script = ExtResource("1_llgri")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2058816522]
+position = Vector2(271.75, 75.75)
+shape = SubResource("RectangleShape2D_tneuq")

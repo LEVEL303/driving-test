@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bpeo848iu1brd" path="res://imgs/linhatracejada.png" id="2_m7tbw"]
 [ext_resource type="Texture2D" uid="uid://dgujq36gy7u2u" path="res://imgs/faixapedestres.png" id="2_rrtif"]
 [ext_resource type="PackedScene" uid="uid://dsu47ntjh6viw" path="res://semaforo.tscn" id="3_7cuts"]
+[ext_resource type="Script" uid="uid://bsdiy2tl38pi" path="res://calcada_deteccao.gd" id="3_ek21e"]
 [ext_resource type="PackedScene" uid="uid://bdgqh5y725n0e" path="res://parada.tscn" id="4_xe7g3"]
 [ext_resource type="Texture2D" uid="uid://cr64dsi4iw400" path="res://imgs/sinalização/Via-lateral-esquerda.png" id="5_emcp4"]
 [ext_resource type="PackedScene" uid="uid://cvaqylgkrm216" path="res://limite_40.tscn" id="5_iuule"]
@@ -11,10 +12,14 @@
 [ext_resource type="PackedScene" uid="uid://dxg4nvaqv1uh5" path="res://limite_60.tscn" id="6_eq8du"]
 [ext_resource type="Texture2D" uid="uid://b4s3vd5bomfmp" path="res://imgs/sinalização/Cruzamento-vias.png" id="6_jpj0s"]
 [ext_resource type="Texture2D" uid="uid://dry0qkx1hdndo" path="res://imgs/sinalização/Interseção-T.png" id="8_xrbya"]
+[ext_resource type="PackedScene" uid="uid://bnvgrqyspddhe" path="res://area_conversao.tscn" id="8_ynwup"]
 [ext_resource type="Texture2D" uid="uid://bjdc5scjhytjd" path="res://imgs/sinalização/Inicio-de-pista-dupla.png" id="9_ommbi"]
+[ext_resource type="PackedScene" uid="uid://df6hwtpkr8mci" path="res://zona_estacionamento.tscn" id="9_rjysx"]
 [ext_resource type="Texture2D" uid="uid://woyr82n4ugm4" path="res://imgs/sinalização/Fim-de-pista-dupla.png" id="10_sf0on"]
 [ext_resource type="Texture2D" uid="uid://cl4hdnjlusxrj" path="res://imgs/sinalização/Curva-acentuada-esquerda.png" id="10_xe7g3"]
 [ext_resource type="Texture2D" uid="uid://cetgx0dyt8lrr" path="res://imgs/sinalização/Curva-acentuada-direita.png" id="11_iuule"]
+[ext_resource type="PackedScene" uid="uid://furtpkx5qc2e" path="res://contramao.tscn" id="16_cxgpi"]
+[ext_resource type="Texture2D" uid="uid://du4il2xtrb7wn" path="res://imgs/seta_rota.webp" id="19_ek21e"]
 
 [node name="Principal" type="Node2D" unique_id=521527966]
 
@@ -996,81 +1001,82 @@ width = 60.0
 texture = ExtResource("2_rrtif")
 texture_mode = 1
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1375510544]
+[node name="CalcadaDeteccao" type="Area2D" parent="." unique_id=1375510544]
+script = ExtResource("3_ek21e")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1598389013]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CalcadaDeteccao" unique_id=1598389013]
 polygon = PackedVector2Array(-37, -557, 2705, -570, 2707, -48, -36, -39)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D" unique_id=1420026328]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="CalcadaDeteccao" unique_id=1420026328]
 polygon = PackedVector2Array(-1703, -564, -349, -564, -346, 1195, -1703, 1197)
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Area2D" unique_id=1147189510]
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="CalcadaDeteccao" unique_id=1147189510]
 polygon = PackedVector2Array(-2454, -2021, -1215, -2021, -1215, -877, -2454, -873)
 
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Area2D" unique_id=456129570]
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="CalcadaDeteccao" unique_id=456129570]
 polygon = PackedVector2Array(-36, 270, -37, 2869, 2703, 2880, 2708, 261)
 
-[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Area2D" unique_id=1203550242]
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="CalcadaDeteccao" unique_id=1203550242]
 polygon = PackedVector2Array(-1701, 1520, -345, 1518, -346, 2869, -1703, 2869)
 
-[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Area2D" unique_id=1652178481]
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="CalcadaDeteccao" unique_id=1652178481]
 polygon = PackedVector2Array(-4119, -565, -2011, -566, -2013, 213, -4119, 211)
 
-[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Area2D" unique_id=10784188]
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="CalcadaDeteccao" unique_id=10784188]
 polygon = PackedVector2Array(-4128, 524, -2016, 529, -2015, 2852, -4132, 2852)
 
-[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Area2D" unique_id=1087324944]
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="CalcadaDeteccao" unique_id=1087324944]
 polygon = PackedVector2Array(-6607, -1771, -4427, -1771, -4427, 212, -6606, 210)
 
-[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Area2D" unique_id=1206003797]
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="CalcadaDeteccao" unique_id=1206003797]
 polygon = PackedVector2Array(-6596, 523, -4445, 520, -4445, 2852, -6600, 2855)
 
-[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="Area2D" unique_id=1913070866]
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="CalcadaDeteccao" unique_id=1913070866]
 polygon = PackedVector2Array(-6610, 3165, -4444, 3162, -4445, 4035, -6613, 4031)
 
-[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="Area2D" unique_id=1882683613]
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="CalcadaDeteccao" unique_id=1882683613]
 polygon = PackedVector2Array(-2581, 4172, -1843, 3939, 615, 3940, 1395, 4122, 602, 4367, -1821, 4367)
 
-[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="Area2D" unique_id=1439379679]
+[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="CalcadaDeteccao" unique_id=1439379679]
 polygon = PackedVector2Array(-4138, 3181, -4136, 4033, -3172, 4033, -1897, 3636, -1895, 3177)
 
-[node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="Area2D" unique_id=955167145]
+[node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="CalcadaDeteccao" unique_id=955167145]
 polygon = PackedVector2Array(2703, 3185, 2704, 3943, 2003, 3948, 632, 3629, 631, 3179)
 
-[node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="Area2D" unique_id=1349574875]
+[node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="CalcadaDeteccao" unique_id=1349574875]
 polygon = PackedVector2Array(-1893, 3178, -1894, 3633, 628, 3630, 628, 3179)
 
-[node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="Area2D" unique_id=560485469]
+[node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="CalcadaDeteccao" unique_id=560485469]
 polygon = PackedVector2Array(-906, -875, -908, -3569, 770, -3573, 779, -1070, 697, -883)
 
-[node name="CollisionPolygon2D16" type="CollisionPolygon2D" parent="Area2D" unique_id=2083141339]
+[node name="CollisionPolygon2D16" type="CollisionPolygon2D" parent="CalcadaDeteccao" unique_id=2083141339]
 polygon = PackedVector2Array(763, -1076, 1642, -1074, 1645, -3567, 766, -3567)
 
-[node name="CollisionPolygon2D17" type="CollisionPolygon2D" parent="Area2D" unique_id=1381374899]
+[node name="CollisionPolygon2D17" type="CollisionPolygon2D" parent="CalcadaDeteccao" unique_id=1381374899]
 polygon = PackedVector2Array(1737, -877, 1630, -1074, 1638, -3567, 4659, -3564, 4666, -881)
 
-[node name="CollisionPolygon2D18" type="CollisionPolygon2D" parent="Area2D" unique_id=96925002]
+[node name="CollisionPolygon2D18" type="CollisionPolygon2D" parent="CalcadaDeteccao" unique_id=96925002]
 polygon = PackedVector2Array(3015, -879, 4666, -882, 4672, 5812, 3013, 5810)
 
-[node name="CollisionPolygon2D19" type="CollisionPolygon2D" parent="Area2D" unique_id=26777095]
+[node name="CollisionPolygon2D19" type="CollisionPolygon2D" parent="CalcadaDeteccao" unique_id=26777095]
 polygon = PackedVector2Array(3013, 4247, 3004, 5809, 641, 5814, 638, 4676, 2002, 4256)
 
-[node name="CollisionPolygon2D20" type="CollisionPolygon2D" parent="Area2D" unique_id=1139706077]
+[node name="CollisionPolygon2D20" type="CollisionPolygon2D" parent="CalcadaDeteccao" unique_id=1139706077]
 polygon = PackedVector2Array(636, 4672, 638, 5815, -1844, 5811, -1843, 4671)
 
-[node name="CollisionPolygon2D21" type="CollisionPolygon2D" parent="Area2D" unique_id=1284920881]
+[node name="CollisionPolygon2D21" type="CollisionPolygon2D" parent="CalcadaDeteccao" unique_id=1284920881]
 polygon = PackedVector2Array(-911, -3568, -910, -2329, -2770, -2330, -2777, -3567)
 
-[node name="CollisionPolygon2D22" type="CollisionPolygon2D" parent="Area2D" unique_id=493930028]
+[node name="CollisionPolygon2D22" type="CollisionPolygon2D" parent="CalcadaDeteccao" unique_id=493930028]
 polygon = PackedVector2Array(-2763, -871, -4119, -871, -4123, -3567, -2764, -3568)
 
-[node name="CollisionPolygon2D23" type="CollisionPolygon2D" parent="Area2D" unique_id=556395683]
+[node name="CollisionPolygon2D23" type="CollisionPolygon2D" parent="CalcadaDeteccao" unique_id=556395683]
 polygon = PackedVector2Array(-1845, 4673, -1847, 5813, -8267, 5812, -8268, 4345, -3156, 4342)
 
-[node name="CollisionPolygon2D24" type="CollisionPolygon2D" parent="Area2D" unique_id=1231171009]
+[node name="CollisionPolygon2D24" type="CollisionPolygon2D" parent="CalcadaDeteccao" unique_id=1231171009]
 polygon = PackedVector2Array(-4122, -2076, -4125, -3569, -8273, -3568, -8269, -2080)
 
-[node name="CollisionPolygon2D25" type="CollisionPolygon2D" parent="Area2D" unique_id=893026234]
+[node name="CollisionPolygon2D25" type="CollisionPolygon2D" parent="CalcadaDeteccao" unique_id=893026234]
 polygon = PackedVector2Array(-6914, -2082, -8270, -2078, -8266, 4337, -6920, 4342)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=287224595]
@@ -1242,6 +1248,374 @@ rotation = -3.1415927
 [node name="limite60" parent="." unique_id=344510100 instance=ExtResource("6_eq8du")]
 position = Vector2(-3440, 4035)
 rotation = 1.5707964
+
+[node name="Contramao" parent="." unique_id=1785982140 instance=ExtResource("16_cxgpi")]
+position = Vector2(-2503, -714)
+
+[node name="Contramao" parent="Contramao" unique_id=1415227065 instance=ExtResource("16_cxgpi")]
+position = Vector2(774, 0)
+
+[node name="Contramao2" parent="Contramao" unique_id=1871041536 instance=ExtResource("16_cxgpi")]
+position = Vector2(1605, 0)
+
+[node name="Contramao3" parent="Contramao" unique_id=540374110 instance=ExtResource("16_cxgpi")]
+position = Vector2(2429, 0)
+
+[node name="Contramao4" parent="Contramao" unique_id=1695040279 instance=ExtResource("16_cxgpi")]
+position = Vector2(2877, 0)
+
+[node name="Contramao5" parent="Contramao" unique_id=1528362129 instance=ExtResource("16_cxgpi")]
+position = Vector2(3331, 0)
+
+[node name="Contramao6" parent="Contramao" unique_id=571183618 instance=ExtResource("16_cxgpi")]
+position = Vector2(3788, 0)
+
+[node name="Contramao7" parent="Contramao" unique_id=1069473353 instance=ExtResource("16_cxgpi")]
+position = Vector2(4245, 0)
+
+[node name="Contramao8" parent="Contramao" unique_id=48389861 instance=ExtResource("16_cxgpi")]
+position = Vector2(4691, 0)
+
+[node name="Contramao9" parent="Contramao" unique_id=262703917 instance=ExtResource("16_cxgpi")]
+position = Vector2(-781, 0)
+
+[node name="Contramao10" parent="Contramao" unique_id=159861019 instance=ExtResource("16_cxgpi")]
+position = Vector2(-1213, 0)
+
+[node name="Contramao11" parent="Contramao" unique_id=2030323929 instance=ExtResource("16_cxgpi")]
+position = Vector2(-1640, 0)
+
+[node name="Contramao12" parent="Contramao" unique_id=1866964491 instance=ExtResource("16_cxgpi")]
+position = Vector2(1438, -676)
+rotation = 1.5707964
+
+[node name="Contramao13" parent="Contramao" unique_id=1206211979 instance=ExtResource("16_cxgpi")]
+position = Vector2(1438, -1337)
+rotation = 1.5707964
+
+[node name="Contramao14" parent="Contramao" unique_id=527136534 instance=ExtResource("16_cxgpi")]
+position = Vector2(1438, -1007)
+rotation = 1.5707964
+
+[node name="Contramao15" parent="Contramao" unique_id=1910115823 instance=ExtResource("16_cxgpi")]
+position = Vector2(774, -1458)
+
+[node name="Contramao16" parent="Contramao" unique_id=1363262951 instance=ExtResource("16_cxgpi")]
+position = Vector2(25, -1458)
+
+[node name="Contramao17" parent="Contramao" unique_id=1761935603 instance=ExtResource("16_cxgpi")]
+position = Vector2(401, -1458)
+
+[node name="Contramao18" parent="Contramao" unique_id=2131887810 instance=ExtResource("16_cxgpi")]
+position = Vector2(-102, -792)
+rotation = -1.5707964
+
+[node name="Contramao19" parent="Contramao" unique_id=1456711400 instance=ExtResource("16_cxgpi")]
+position = Vector2(-102, -124)
+rotation = -1.5707964
+
+[node name="Contramao20" parent="Contramao" unique_id=171864332 instance=ExtResource("16_cxgpi")]
+position = Vector2(-100, -458)
+rotation = -1.5707964
+
+[node name="Contramao21" parent="Contramao" unique_id=667378107 instance=ExtResource("16_cxgpi")]
+position = Vector2(-1777, -669)
+rotation = 1.5707964
+
+[node name="Contramao22" parent="Contramao" unique_id=2127500030 instance=ExtResource("16_cxgpi")]
+position = Vector2(-1778, -1086)
+rotation = 1.5707964
+
+[node name="Contramao23" parent="Contramao" unique_id=1832706875 instance=ExtResource("16_cxgpi")]
+position = Vector2(-2456, -1209)
+
+[node name="Contramao24" parent="Contramao" unique_id=785648800 instance=ExtResource("16_cxgpi")]
+position = Vector2(-4115, -1209)
+
+[node name="Contramao25" parent="Contramao" unique_id=1174371079 instance=ExtResource("16_cxgpi")]
+position = Vector2(-3707, -1209)
+
+[node name="Contramao26" parent="Contramao" unique_id=729246955 instance=ExtResource("16_cxgpi")]
+position = Vector2(-3290, -1209)
+
+[node name="Contramao27" parent="Contramao" unique_id=812355992 instance=ExtResource("16_cxgpi")]
+position = Vector2(-2874, -1209)
+
+[node name="Contramao28" parent="Contramao" unique_id=2098346869 instance=ExtResource("16_cxgpi")]
+position = Vector2(-4256, -523)
+rotation = -1.5707964
+
+[node name="Contramao29" parent="Contramao" unique_id=102581846 instance=ExtResource("16_cxgpi")]
+position = Vector2(-4254, 937)
+rotation = -1.5707964
+
+[node name="Contramao30" parent="Contramao" unique_id=476030032 instance=ExtResource("16_cxgpi")]
+position = Vector2(-4254, -155)
+rotation = -1.5707964
+
+[node name="Contramao31" parent="Contramao" unique_id=1609489736 instance=ExtResource("16_cxgpi")]
+position = Vector2(-4254, 205)
+rotation = -1.5707964
+
+[node name="Contramao32" parent="Contramao" unique_id=2114771084 instance=ExtResource("16_cxgpi")]
+position = Vector2(-4254, 572)
+rotation = -1.5707964
+
+[node name="Contramao33" parent="Contramao" unique_id=1344148985 instance=ExtResource("16_cxgpi")]
+position = Vector2(-3567, 1072)
+rotation = -3.1415927
+
+[node name="Contramao34" parent="Contramao" unique_id=1439618917 instance=ExtResource("16_cxgpi")]
+position = Vector2(-1952, 1071)
+rotation = -3.1415927
+
+[node name="Contramao35" parent="Contramao" unique_id=675977563 instance=ExtResource("16_cxgpi")]
+position = Vector2(-3167, 1072)
+rotation = -3.1415927
+
+[node name="Contramao36" parent="Contramao" unique_id=55779191 instance=ExtResource("16_cxgpi")]
+position = Vector2(-2760, 1076)
+rotation = -3.1415927
+
+[node name="Contramao37" parent="Contramao" unique_id=1719058904 instance=ExtResource("16_cxgpi")]
+position = Vector2(-2350, 1075)
+rotation = -3.1415927
+
+[node name="Contramao38" parent="Contramao" unique_id=1523494697 instance=ExtResource("16_cxgpi")]
+position = Vector2(-1083, 1074)
+rotation = -3.1415927
+
+[node name="Contramao39" parent="Contramao" unique_id=1069547116 instance=ExtResource("16_cxgpi")]
+position = Vector2(494, 1072)
+rotation = -3.1415927
+
+[node name="Contramao40" parent="Contramao" unique_id=1359087127 instance=ExtResource("16_cxgpi")]
+position = Vector2(104, 1074)
+rotation = -3.1415927
+
+[node name="Contramao41" parent="Contramao" unique_id=808074195 instance=ExtResource("16_cxgpi")]
+position = Vector2(-687, 1074)
+rotation = -3.1415927
+
+[node name="Contramao42" parent="Contramao" unique_id=383153158 instance=ExtResource("16_cxgpi")]
+position = Vector2(-291, 1076)
+rotation = -3.1415927
+
+[node name="Contramao43" parent="Contramao" unique_id=999665244 instance=ExtResource("16_cxgpi")]
+position = Vector2(650, 1739)
+rotation = -1.5707964
+
+[node name="Contramao44" parent="Contramao" unique_id=1962981567 instance=ExtResource("16_cxgpi")]
+position = Vector2(649, 1960)
+rotation = -1.5707964
+
+[node name="Contramao45" parent="Contramao" unique_id=1552180088 instance=ExtResource("16_cxgpi")]
+position = Vector2(649, 2760)
+rotation = -1.5707964
+
+[node name="Contramao46" parent="Contramao" unique_id=1899835973 instance=ExtResource("16_cxgpi")]
+position = Vector2(646, 3582)
+rotation = -1.5707964
+
+[node name="Contramao47" parent="Contramao" unique_id=2103914826 instance=ExtResource("16_cxgpi")]
+position = Vector2(649, 3170)
+rotation = -1.5707964
+
+[node name="Contramao48" parent="Contramao" unique_id=236079202 instance=ExtResource("16_cxgpi")]
+position = Vector2(-43, 3730)
+
+[node name="Contramao49" parent="Contramao" unique_id=646411517 instance=ExtResource("16_cxgpi")]
+position = Vector2(-1657, 3730)
+
+[node name="Contramao50" parent="Contramao" unique_id=603419086 instance=ExtResource("16_cxgpi")]
+position = Vector2(-444, 3730)
+
+[node name="Contramao51" parent="Contramao" unique_id=2013819142 instance=ExtResource("16_cxgpi")]
+position = Vector2(-1254, 3730)
+
+[node name="Contramao52" parent="Contramao" unique_id=1836602345 instance=ExtResource("16_cxgpi")]
+position = Vector2(-844, 3730)
+
+[node name="Contramao53" parent="Contramao" unique_id=1886838500 instance=ExtResource("16_cxgpi")]
+position = Vector2(-1787, 4407)
+rotation = -1.5707964
+
+[node name="Contramao54" parent="Contramao" unique_id=359448603 instance=ExtResource("16_cxgpi")]
+position = Vector2(-1788, 4784)
+rotation = -1.5707964
+
+[node name="Contramao55" parent="Contramao" unique_id=1754301026 instance=ExtResource("16_cxgpi")]
+position = Vector2(-1088, 4893)
+rotation = -3.1415927
+
+[node name="Contramao56" parent="Contramao" unique_id=195296830 instance=ExtResource("16_cxgpi")]
+position = Vector2(-671, 4893)
+rotation = -3.1415927
+
+[node name="Contramao57" parent="Contramao" unique_id=2143313215 instance=ExtResource("16_cxgpi")]
+position = Vector2(-244, 4776.9995)
+rotation = -3.403392
+
+[node name="Contramao58" parent="Contramao" unique_id=196548792 instance=ExtResource("16_cxgpi")]
+position = Vector2(272, 4703)
+rotation = -3.403392
+
+[node name="Contramao59" parent="Contramao" unique_id=280059574 instance=ExtResource("16_cxgpi")]
+position = Vector2(673, 4574)
+rotation = -3.403392
+
+[node name="Contramao60" parent="Contramao" unique_id=1978639799 instance=ExtResource("16_cxgpi")]
+position = Vector2(1046, 4573)
+rotation = -3.1415927
+
+[node name="Contramao61" parent="Contramao" unique_id=1996012356 instance=ExtResource("16_cxgpi")]
+position = Vector2(1415, 4575)
+rotation = -3.1415927
+
+[node name="Contramao62" parent="Contramao" unique_id=642969420 instance=ExtResource("16_cxgpi")]
+position = Vector2(1779, 4573)
+rotation = -3.1415927
+
+[node name="Contramao63" parent="Contramao" unique_id=1537876648 instance=ExtResource("16_cxgpi")]
+position = Vector2(2153, 4572)
+rotation = -3.1415927
+
+[node name="Contramao64" parent="Contramao" unique_id=1754016406 instance=ExtResource("16_cxgpi")]
+position = Vector2(2524, 4573)
+rotation = -3.1415927
+
+[node name="Contramao65" parent="Contramao" unique_id=915529333 instance=ExtResource("16_cxgpi")]
+position = Vector2(2893, 4574)
+rotation = -3.1415927
+
+[node name="Contramao66" parent="Contramao" unique_id=111393797 instance=ExtResource("16_cxgpi")]
+position = Vector2(3272, 4573)
+rotation = -3.1415927
+
+[node name="Contramao67" parent="Contramao" unique_id=158881109 instance=ExtResource("16_cxgpi")]
+position = Vector2(3626, 4703.0005)
+rotation = -2.8797934
+
+[node name="Contramao68" parent="Contramao" unique_id=1626205773 instance=ExtResource("16_cxgpi")]
+position = Vector2(4001, 4777)
+rotation = -2.8797934
+
+[node name="Contramao69" parent="Contramao" unique_id=1748505678 instance=ExtResource("16_cxgpi")]
+position = Vector2(4466, 4817.0005)
+rotation = -2.8797934
+
+[node name="Contramao70" parent="Contramao" unique_id=1879201545 instance=ExtResource("16_cxgpi")]
+position = Vector2(4902, 4812)
+rotation = -3.1415927
+
+[node name="Contramao71" parent="Contramao" unique_id=1717050377 instance=ExtResource("16_cxgpi")]
+position = Vector2(5240, 4809)
+rotation = -3.1415927
+
+[node name="Contramao72" parent="Contramao" unique_id=1610733047 instance=ExtResource("16_cxgpi")]
+position = Vector2(5357, 4136)
+rotation = -4.712389
+
+[node name="Contramao73" parent="Contramao" unique_id=939718759 instance=ExtResource("16_cxgpi")]
+position = Vector2(5357, 3876)
+rotation = -4.712389
+
+[node name="Contramao74" parent="Contramao" unique_id=655341973 instance=ExtResource("16_cxgpi")]
+position = Vector2(5362, 3058)
+rotation = -4.712389
+
+[node name="Contramao75" parent="Contramao" unique_id=85022108 instance=ExtResource("16_cxgpi")]
+position = Vector2(5362, 2708)
+rotation = -4.712389
+
+[node name="Contramao76" parent="Contramao" unique_id=306361731 instance=ExtResource("16_cxgpi")]
+position = Vector2(5362, 1314)
+rotation = -4.712389
+
+[node name="Contramao77" parent="Contramao" unique_id=1103023489 instance=ExtResource("16_cxgpi")]
+position = Vector2(5362, 963)
+rotation = -4.712389
+
+[node name="Contramao78" parent="Contramao" unique_id=319711159 instance=ExtResource("16_cxgpi")]
+position = Vector2(5363, 1665)
+rotation = -4.712389
+
+[node name="Contramao79" parent="Contramao" unique_id=1062831518 instance=ExtResource("16_cxgpi")]
+position = Vector2(5362, 2012)
+rotation = -4.712389
+
+[node name="Contramao80" parent="Contramao" unique_id=721655660 instance=ExtResource("16_cxgpi")]
+position = Vector2(5362, 2358)
+rotation = -4.712389
+
+[node name="Contramao81" parent="Contramao" unique_id=283430961 instance=ExtResource("16_cxgpi")]
+position = Vector2(5360, 136)
+rotation = -4.712389
+
+[node name="Contramao82" parent="Contramao" unique_id=2117966042 instance=ExtResource("16_cxgpi")]
+position = Vector2(-1778, 133)
+rotation = 1.5707964
+
+[node name="Contramao83" parent="Contramao" unique_id=314867209 instance=ExtResource("16_cxgpi")]
+position = Vector2(-1779, 396)
+rotation = 1.5707964
+
+[node name="AreaConversao" parent="." unique_id=682987346 instance=ExtResource("8_ynwup")]
+position = Vector2(-350, -869)
+
+[node name="AreaConversao2" parent="AreaConversao" unique_id=562838632 instance=ExtResource("8_ynwup")]
+position = Vector2(-872, 0)
+
+[node name="AreaConversao3" parent="AreaConversao" unique_id=8170491 instance=ExtResource("8_ynwup")]
+position = Vector2(-1665, 0)
+
+[node name="AreaConversao4" parent="AreaConversao" unique_id=1294318155 instance=ExtResource("8_ynwup")]
+position = Vector2(-2416, 0)
+
+[node name="AreaConversao5" parent="AreaConversao" unique_id=210089185 instance=ExtResource("8_ynwup")]
+position = Vector2(-4081, 0)
+
+[node name="AreaConversao6" parent="AreaConversao" unique_id=1497609777 instance=ExtResource("8_ynwup")]
+position = Vector2(-4088, 1091)
+
+[node name="AreaConversao7" parent="AreaConversao" unique_id=2136579590 instance=ExtResource("8_ynwup")]
+position = Vector2(-6563, 1091)
+
+[node name="AreaConversao8" parent="AreaConversao" unique_id=859846565 instance=ExtResource("8_ynwup")]
+position = Vector2(-1665, 1091)
+
+[node name="AreaConversao9" parent="AreaConversao" unique_id=141325716 instance=ExtResource("8_ynwup")]
+position = Vector2(0, 837)
+
+[node name="AreaConversao10" parent="AreaConversao" unique_id=1738772162 instance=ExtResource("8_ynwup")]
+position = Vector2(3054, 827)
+
+[node name="AreaConversao11" parent="AreaConversao" unique_id=1119162448 instance=ExtResource("8_ynwup")]
+position = Vector2(0, 2081)
+
+[node name="AreaConversao12" parent="AreaConversao" unique_id=1249633085 instance=ExtResource("8_ynwup")]
+position = Vector2(-1665, 2081)
+
+[node name="AreaConversao13" parent="AreaConversao" unique_id=678059395 instance=ExtResource("8_ynwup")]
+position = Vector2(-4096, 3740)
+
+[node name="AreaConversao14" parent="AreaConversao" unique_id=188850482 instance=ExtResource("8_ynwup")]
+position = Vector2(-6563, 3728)
+
+[node name="AreaConversao15" parent="AreaConversao" unique_id=1854346355 instance=ExtResource("8_ynwup")]
+position = Vector2(-4096, 4912)
+
+[node name="AreaConversao16" parent="AreaConversao" unique_id=393633835 instance=ExtResource("8_ynwup")]
+position = Vector2(-1665, 3740)
+
+[node name="AreaConversao17" parent="AreaConversao" unique_id=90996660 instance=ExtResource("8_ynwup")]
+position = Vector2(8, 3748)
+
+[node name="AreaConversao18" parent="AreaConversao" unique_id=890179108 instance=ExtResource("8_ynwup")]
+position = Vector2(3054, 3748)
+
+[node name="ZonaEstacionamento" parent="." unique_id=178074888 instance=ExtResource("9_rjysx")]
+position = Vector2(766, -1069)
 
 [node name="ViaLateralEsquerda" type="Sprite2D" parent="." unique_id=706154163]
 position = Vector2(165, -910)
@@ -1667,6 +2041,70 @@ position = Vector2(2320.847, 575.1111)
 rotation = -4.712389
 scale = Vector2(0.9999999, 1)
 texture = ExtResource("11_iuule")
+
+[node name="SetaRota" type="Sprite2D" parent="." unique_id=1838575400]
+position = Vector2(2, -1010)
+rotation = 3.1415925
+scale = Vector2(0.43600005, 0.4702381)
+texture = ExtResource("19_ek21e")
+
+[node name="SetaRota2" type="Sprite2D" parent="SetaRota" unique_id=1179256769]
+position = Vector2(-3277.5222, -1220.6589)
+texture = ExtResource("19_ek21e")
+
+[node name="SetaRota3" type="Sprite2D" parent="SetaRota" unique_id=340948696]
+position = Vector2(1768.3484, 125.46866)
+rotation = 1.5707964
+texture = ExtResource("19_ek21e")
+
+[node name="SetaRota4" type="Sprite2D" parent="SetaRota" unique_id=638118807]
+position = Vector2(6763.7607, -6.3788376)
+texture = ExtResource("19_ek21e")
+
+[node name="SetaRota5" type="Sprite2D" parent="SetaRota" unique_id=957858895]
+position = Vector2(9137.613, 125.46969)
+rotation = 1.5707964
+texture = ExtResource("19_ek21e")
+
+[node name="SetaRota6" type="Sprite2D" parent="SetaRota" unique_id=599750218]
+position = Vector2(14752.292, -2313.7192)
+rotation = 3.1415927
+texture = ExtResource("19_ek21e")
+
+[node name="SetaRota7" type="Sprite2D" parent="SetaRota" unique_id=869426261]
+position = Vector2(10979.358, -3542.8845)
+rotation = 3.1415927
+texture = ExtResource("19_ek21e")
+
+[node name="SetaRota8" type="Sprite2D" parent="SetaRota" unique_id=1453550740]
+position = Vector2(4940.367, -3689.6194)
+rotation = 4.712389
+texture = ExtResource("19_ek21e")
+
+[node name="SetaRota9" type="Sprite2D" parent="SetaRota" unique_id=445730167]
+position = Vector2(5064.22, -7908.76)
+rotation = 6.2831855
+texture = ExtResource("19_ek21e")
+
+[node name="SetaRota10" type="Sprite2D" parent="SetaRota" unique_id=74497630]
+position = Vector2(9204.129, -9297.417)
+rotation = 4.712389
+texture = ExtResource("19_ek21e")
+
+[node name="SetaRota11" type="Sprite2D" parent="SetaRota" unique_id=1947696125]
+position = Vector2(9075.688, -10443.645)
+rotation = 3.1415927
+texture = ExtResource("19_ek21e")
+
+[node name="SetaRota12" type="Sprite2D" parent="SetaRota" unique_id=1518603824]
+position = Vector2(-7252.291, -8972.052)
+rotation = 1.5707964
+texture = ExtResource("19_ek21e")
+
+[node name="SetaRota13" type="Sprite2D" parent="SetaRota" unique_id=832920382]
+position = Vector2(-7252.292, -2770.9377)
+rotation = 1.5707964
+texture = ExtResource("19_ek21e")
 
 [node name="Carro" parent="." unique_id=1147379201 instance=ExtResource("1_tr6oq")]
 position = Vector2(1450, -980)
