@@ -9,7 +9,7 @@ func _ready():
 func _on_body_entered(body):
 	if "velocity" in body and not falta_registrada:
 		if body.velocity.normalized().dot(global_transform.x) < -0.2:
-			print("Falta registrada: Dirigindo na contramão!")
+			GerenciadorInfracoes.registrar_infracao("contramao")
 			falta_registrada = true
 
 func _on_body_exited(_body):

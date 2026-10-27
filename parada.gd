@@ -18,5 +18,5 @@ func _on_body_entered(body):
 
 func _on_body_exited(_body):
 	if not parou:
-		print("Infração: Não respeitou a placa de Pare!")
+		GerenciadorInfracoes.registrar_infracao("parada_obrigatoria")
 	carro_na_area = null

@@ -9,7 +9,7 @@ func _ready():
 func _on_body_entered(body):
 	if "velocidade_atual" in body:
 		carro_na_calcada = true
-		print("Falta registrada: O veículo subiu na calçada!")
+		GerenciadorInfracoes.registrar_infracao("calcada")
 
 func _on_body_exited(body):
 	if "velocidade_atual" in body:

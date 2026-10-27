@@ -7,9 +7,9 @@ func _ready():
 func _on_body_entered(body):
 	if "velocidade_atual" in body and body.velocidade_atual > 0:
 		if body.estado_seta != "direita":
-			print("Falta registrada: Entrou na vaga sem sinalizar para a direita!")
+			GerenciadorInfracoes.registrar_infracao("entrada_vaga")
 
 func _on_body_exited(body):
 	if "velocidade_atual" in body and body.velocidade_atual < 0:
 		if body.estado_seta != "esquerda":
-			print("Falta registrada: Saiu da vaga em ré sem sinalizar para a esquerda!")
+			GerenciadorInfracoes.registrar_infracao("saida_vaga")

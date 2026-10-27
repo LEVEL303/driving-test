@@ -22,17 +22,16 @@ func _on_body_exited(body):
 		var virou_direita = diferenca_rotacao > 0.3
 		var seguiu_reto = not virou_esquerda and not virou_direita
 		
-		var infração = false
+		var infracao = false
 		
-		# 1. Virou para qualquer lado sem dar seta
 		if seta_inicial == "desligada" and not seguiu_reto:
-			infração = true
+			infracao = true
 		elif seta_inicial != "desligada" and seguiu_reto:
-			infração = true
+			infracao = true
 		elif (seta_inicial == "esquerda" and virou_direita) or (seta_inicial == "direita" and virou_esquerda):
-			infração = true
+			infracao = true
 			
-		if infração:
-			print("Falta registrada: Uso incorreto das setas / Sinalização de conversão!")
+		if infracao:
+			GerenciadorInfracoes.registrar_infracao("setas_bifurcacao")
 			
 		carro_na_area = null

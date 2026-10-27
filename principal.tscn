@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://cetgx0dyt8lrr" path="res://imgs/sinalização/Curva-acentuada-direita.png" id="11_iuule"]
 [ext_resource type="PackedScene" uid="uid://furtpkx5qc2e" path="res://contramao.tscn" id="16_cxgpi"]
 [ext_resource type="Texture2D" uid="uid://du4il2xtrb7wn" path="res://imgs/seta_rota.webp" id="19_ek21e"]
+[ext_resource type="AudioStream" uid="uid://bclbjw221tvrh" path="res://14. Maya Fey - Turnabout Sisters 2001.mp3" id="21_1g4wj"]
 
 [node name="Principal" type="Node2D" unique_id=521527966]
 
@@ -1249,6 +1250,10 @@ rotation = -3.1415927
 position = Vector2(-3440, 4035)
 rotation = 1.5707964
 
+[node name="limite60" parent="limite60" unique_id=486438827 instance=ExtResource("6_eq8du")]
+position = Vector2(215.99976, -5454)
+rotation = 3.1415927
+
 [node name="Contramao" parent="." unique_id=1785982140 instance=ExtResource("16_cxgpi")]
 position = Vector2(-2503, -714)
 
@@ -2109,3 +2114,10 @@ texture = ExtResource("19_ek21e")
 [node name="Carro" parent="." unique_id=1147379201 instance=ExtResource("1_tr6oq")]
 position = Vector2(1450, -980)
 rotation = -0.5235988
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=145320216]
+stream = ExtResource("21_1g4wj")
+volume_db = 1.0
+autoplay = true
+max_distance = 10000.0
+attenuation = 0.0
