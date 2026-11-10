@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://furtpkx5qc2e" path="res://contramao.tscn" id="16_cxgpi"]
 [ext_resource type="Texture2D" uid="uid://du4il2xtrb7wn" path="res://imgs/seta_rota.webp" id="19_ek21e"]
 [ext_resource type="AudioStream" uid="uid://bclbjw221tvrh" path="res://14. Maya Fey - Turnabout Sisters 2001.mp3" id="21_1g4wj"]
+[ext_resource type="Script" uid="uid://dn4h5cgxof7d5" path="res://botao_finalizar.gd" id="22_5jtgv"]
 
 [node name="Principal" type="Node2D" unique_id=521527966]
 
@@ -2121,3 +2122,22 @@ volume_db = 1.0
 autoplay = true
 max_distance = 10000.0
 attenuation = 0.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=462296563]
+
+[node name="PainelFinalizar" type="Control" parent="CanvasLayer" unique_id=1067718475]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -861.0
+offset_top = 848.0
+offset_right = -821.0
+offset_bottom = 888.0
+
+[node name="BotaoFinalizar" type="Button" parent="CanvasLayer/PainelFinalizar" unique_id=668897414]
+layout_mode = 0
+offset_left = 1807.0
+offset_top = -800.0
+offset_right = 1929.0
+offset_bottom = -769.0
+text = "Finalizar Prova"
+script = ExtResource("22_5jtgv")

@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://melf33o4qyv4"]
+
+[ext_resource type="Script" uid="uid://d1cv0x6knuev3" path="res://tela_instrucoes.gd" id="1_emrsv"]
+[ext_resource type="FontFile" uid="uid://s3kt6w2igyh3" path="res://Poppins/Poppins-SemiBold.ttf" id="2_y3suj"]
+
+[node name="TelaInstrucoes" type="Control" unique_id=731748437]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_emrsv")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1529229063]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.09019608, 0.16470589, 0.22745098, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1612091006]
+layout_mode = 0
+offset_left = 471.0
+offset_top = 42.0
+offset_right = 720.0
+offset_bottom = 98.0
+theme_override_colors/font_color = Color(0.09803922, 0.4627451, 0.8235294, 1)
+theme_override_fonts/font = ExtResource("2_y3suj")
+theme_override_font_sizes/font_size = 40
+text = "INSTRUÇÕES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Texto" type="Label" parent="." unique_id=1853384148]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 138.0
+offset_right = 1084.0
+offset_bottom = 541.0
+theme_override_colors/font_color = Color(0.19442168, 0.52700174, 0.43471032, 1)
+theme_override_fonts/font = ExtResource("2_y3suj")
+theme_override_font_sizes/font_size = 18
+text = "Objetivo: Concluir o percurso da prova prática de direção seguindo as indicações das setas e estacionar 
+o veículo corretamente.
+
+Controles do Veículo:
+Acelerar / Frear: Setas para cima e para baixo;
+Curvas: Setas para a esquerda e para a direita;
+Setas de Direção: Tecla 'A' (Seta Esquerda) e 'S' (Seta Direita);
+Ajustes de Limite de Velocidade: Teclas de 2 a 0 (2 = 20km/h, 3 = 30km/h, 4 = 40km/h, 5 = 50km/h, 
+6 = 60km/h, 8 = 80km/h, 0 = 100km/h).
+
+Indicação de Rota: Siga as placas com setas fixadas ao longo das vias para saber o caminho correto da prova.
+
+Finalização: Após estacionar o veículo na vaga de retorno, 
+clique no botão \"Finalizar Prova\" na tela para encerrar a avaliação."
+
+[node name="BotaoVoltar" type="Button" parent="." unique_id=1276053759]
+layout_mode = 0
+offset_left = 958.0
+offset_top = 574.0
+offset_right = 1043.0
+offset_bottom = 605.0
+theme_override_colors/font_color = Color(0.09803922, 0.4627451, 0.8235294, 1)
+theme_override_colors/font_hover_color = Color(1, 0.8, 0, 1)
+theme_override_fonts/font = ExtResource("2_y3suj")
+theme_override_font_sizes/font_size = 20
+text = "VOLTAR"

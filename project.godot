@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Driving Test"
-run/main_scene="uid://43fvvlw7g6v2"
+run/main_scene="uid://b0hjpykx5ht7h"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
