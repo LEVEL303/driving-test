@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://cif86i7n8gwnb"]
+
+[ext_resource type="Script" uid="uid://d2nenwk7qqw10" path="res://tela_resultado.gd" id="1_i863h"]
+[ext_resource type="FontFile" uid="uid://s3kt6w2igyh3" path="res://Poppins/Poppins-SemiBold.ttf" id="2_r8c0e"]
+
+[node name="TelaResultado" type="Control" unique_id=1374986356]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i863h")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=696780686]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.09019608, 0.16470589, 0.22745098, 1)
+
+[node name="LabelTitulo" type="Label" parent="." unique_id=440896584]
+layout_mode = 0
+offset_left = 462.0
+offset_top = 39.0
+offset_right = 691.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(0.09803922, 0.4627451, 0.8235294, 1)
+theme_override_fonts/font = ExtResource("2_r8c0e")
+theme_override_font_sizes/font_size = 40
+text = "RESULTADO"
+
+[node name="BotaoRetornar" type="Button" parent="." unique_id=280207980]
+layout_mode = 0
+offset_left = 889.0
+offset_top = 578.0
+offset_right = 1087.0
+offset_bottom = 614.0
+theme_override_colors/font_color = Color(0.09803922, 0.4627451, 0.8235294, 1)
+theme_override_colors/font_hover_color = Color(1, 0.8, 0, 1)
+theme_override_fonts/font = ExtResource("2_r8c0e")
+theme_override_font_sizes/font_size = 20
+text = "RETORNAR AO MENU"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=351761326]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -418.0
+offset_top = -171.75
+offset_right = 418.0
+offset_bottom = 221.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="LabelResultado" type="Label" parent="VBoxContainer" unique_id=1986559226]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_r8c0e")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+
+[node name="LabelPontuacao" type="Label" parent="VBoxContainer" unique_id=1529579965]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_r8c0e")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer" unique_id=1390019958]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.05621537, 0.11358366, 0.16187465, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/ColorRect" unique_id=1946606493]
+layout_mode = 0
+offset_top = -0.25
+offset_right = 836.0
+offset_bottom = 233.0
+size_flags_vertical = 3
+
+[node name="ListaInfracoes" type="VBoxContainer" parent="VBoxContainer/ColorRect/ScrollContainer" unique_id=1679634149]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3

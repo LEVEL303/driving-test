@@ -20,10 +20,10 @@ color = Color(0.09019608, 0.16470589, 0.22745098, 1)
 
 [node name="Label" type="Label" parent="." unique_id=1612091006]
 layout_mode = 0
-offset_left = 471.0
-offset_top = 42.0
-offset_right = 720.0
-offset_bottom = 98.0
+offset_left = 470.0
+offset_top = 44.0
+offset_right = 719.0
+offset_bottom = 100.0
 theme_override_colors/font_color = Color(0.09803922, 0.4627451, 0.8235294, 1)
 theme_override_fonts/font = ExtResource("2_y3suj")
 theme_override_font_sizes/font_size = 40

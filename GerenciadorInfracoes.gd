@@ -68,18 +68,14 @@ func registrar_infracao(chave: String) -> void:
 		var inf = CADASTRO_INFRACOES[chave]
 		pontuacao_total += inf.penalidade
 		historico_infracoes.append(inf)
-		print("Falta registrada: ", inf.nome, " | Penalidade: +", inf.penalidade, " pontos (Total acumulado: ", pontuacao_total, ")")
 
 func finalizar_prova() -> void:
 	if prova_finalizada:
 		return
 	prova_finalizada = true
-	
-	print("\n--- FIM DA PROVA PRÁTICA ---")
-	print("Total de pontos de penalização acumulados: ", pontuacao_total)
-	
-	if pontuacao_total <= 10:
-		print("Resultado: APROVADO! (Pontuação dentro do limite permitido)")
-	else:
-		print("Resultado: REPROVADO! (Ultrapassou o limite de 10 pontos)")
-	print("-----------------------------\n")
+	get_tree().change_scene_to_file("res://tela_resultado.tscn")
+
+func reiniciar_dados() -> void:
+	pontuacao_total = 0
+	historico_infracoes.clear()
+	prova_finalizada = false
