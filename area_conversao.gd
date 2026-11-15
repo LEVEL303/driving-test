@@ -32,6 +32,6 @@ func _on_body_exited(body):
 			infracao = true
 			
 		if infracao:
-			GerenciadorInfracoes.registrar_infracao("setas_bifurcacao")
+			GerenciadorInfracoes.registrar_infracao("conversao")
 			
 		carro_na_area = null

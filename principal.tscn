@@ -1620,6 +1620,27 @@ position = Vector2(8, 3748)
 [node name="AreaConversao18" parent="AreaConversao" unique_id=890179108 instance=ExtResource("8_ynwup")]
 position = Vector2(3054, 3748)
 
+[node name="AreaConversao19" parent="AreaConversao" unique_id=1059990816 instance=ExtResource("8_ynwup")]
+position = Vector2(-6563, -1202)
+
+[node name="AreaConversao20" parent="AreaConversao" unique_id=1432274827 instance=ExtResource("8_ynwup")]
+position = Vector2(-4081, -1202)
+
+[node name="AreaConversao21" parent="AreaConversao" unique_id=633379933 instance=ExtResource("8_ynwup")]
+position = Vector2(-2416, -1455)
+
+[node name="AreaConversao22" parent="AreaConversao" unique_id=1178642443 instance=ExtResource("8_ynwup")]
+position = Vector2(-861, -1455)
+
+[node name="AreaConversao23" parent="AreaConversao" unique_id=1090720252 instance=ExtResource("8_ynwup")]
+position = Vector2(3054, 0)
+
+[node name="AreaConversao24" parent="AreaConversao" unique_id=853589773 instance=ExtResource("8_ynwup")]
+position = Vector2(3054, 4818)
+
+[node name="AreaConversao25" parent="AreaConversao" unique_id=1150898527 instance=ExtResource("8_ynwup")]
+position = Vector2(-6576, 4912)
+
 [node name="ZonaEstacionamento" parent="." unique_id=178074888 instance=ExtResource("9_rjysx")]
 position = Vector2(766, -1069)
 

@@ -29,9 +29,9 @@ const CADASTRO_INFRACOES = {
 		"classificacao": "Grave",
 		"penalidade": 4
 	},
-	"setas_bifurcacao": {
+	"conversao": {
 		"nome": "Uso inadequado das setas",
-		"descricao": "O jogador não fez uso adequado das setas na hora de indicar sua ação em uma bifurcação.",
+		"descricao": "O jogador não fez uso adequado das setas na hora de indicar sua ação ao realizar uma conversão.",
 		"classificacao": "Grave",
 		"penalidade": 4
 	},
