@@ -22,12 +22,19 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.09019608, 0.16470589, 0.22745098, 1)
 
-[node name="Label" type="Label" parent="." unique_id=1449565975]
-layout_mode = 0
-offset_left = 336.0
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=490796555]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -237.5
 offset_top = 81.0
-offset_right = 811.0
+offset_right = 237.5
 offset_bottom = 180.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="VBoxContainer2" unique_id=1449565975]
+layout_mode = 2
 theme_override_colors/font_color = Color(0.41960785, 0.42352942, 0.43137255, 1)
 theme_override_fonts/font = ExtResource("2_gmcsc")
 theme_override_font_sizes/font_size = 70

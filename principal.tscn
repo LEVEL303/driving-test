@@ -2156,9 +2156,9 @@ offset_bottom = 888.0
 
 [node name="BotaoFinalizar" type="Button" parent="CanvasLayer/PainelFinalizar" unique_id=668897414]
 layout_mode = 0
-offset_left = 1807.0
-offset_top = -800.0
-offset_right = 1929.0
-offset_bottom = -769.0
+offset_left = 1851.0
+offset_top = -810.0
+offset_right = 1973.0
+offset_bottom = -779.0
 text = "Finalizar Prova"
 script = ExtResource("22_5jtgv")

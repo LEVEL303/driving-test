@@ -20,6 +20,8 @@ shape = SubResource("RectangleShape2D_tneuq")
 ignore_rotation = false
 zoom = Vector2(0.6, 0.6)
 position_smoothing_enabled = true
+position_smoothing_speed = 3.0
+rotation_smoothing_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1010094913]
 rotation = 4.712389
@@ -28,10 +30,10 @@ texture = ExtResource("3_wjmyd")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=655963212]
 
 [node name="LabelVelocidade" type="Label" parent="CanvasLayer" unique_id=1543352497]
-offset_left = 637.0
-offset_top = 270.0
-offset_right = 677.0
-offset_bottom = 293.0
+offset_left = 788.0
+offset_top = 237.0
+offset_right = 828.0
+offset_bottom = 260.0
 
 [node name="TextureRectEsq" type="TextureRect" parent="CanvasLayer" unique_id=1397690902]
 offset_left = 35.000015
