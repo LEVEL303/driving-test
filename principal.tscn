@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://cetgx0dyt8lrr" path="res://imgs/sinalização/Curva-acentuada-direita.png" id="11_iuule"]
 [ext_resource type="PackedScene" uid="uid://furtpkx5qc2e" path="res://contramao.tscn" id="16_cxgpi"]
 [ext_resource type="Texture2D" uid="uid://du4il2xtrb7wn" path="res://imgs/seta_rota.webp" id="19_ek21e"]
-[ext_resource type="AudioStream" uid="uid://bclbjw221tvrh" path="res://14. Maya Fey - Turnabout Sisters 2001.mp3" id="21_1g4wj"]
+[ext_resource type="AudioStream" uid="uid://dk7q87ssbgi4u" path="res://5-79. Beneath The Mask -Instrumental-.mp3" id="21_5jtgv"]
 [ext_resource type="Script" uid="uid://dn4h5cgxof7d5" path="res://botao_finalizar.gd" id="22_5jtgv"]
 
 [node name="Principal" type="Node2D" unique_id=521527966]
@@ -2137,12 +2137,9 @@ texture = ExtResource("19_ek21e")
 position = Vector2(1450, -980)
 rotation = -0.5235988
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=145320216]
-stream = ExtResource("21_1g4wj")
-volume_db = 1.0
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="." unique_id=494560445]
+stream = ExtResource("21_5jtgv")
 autoplay = true
-max_distance = 10000.0
-attenuation = 0.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=462296563]
 
